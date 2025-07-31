@@ -22,21 +22,51 @@ img, picture, video, canvas, svg {
    Header styling
 ======================== */
 
+.ribbon {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1/1.5;
+  z-index: -1;
+  background-image: linear-gradient(150deg, #7bb661 70%, white 70% );
+}
+
 .info {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.ribbon {
-  position: absolute;
-  height: 550px;
-  width: 100%;
-  z-index: -1;
-  background-image: linear-gradient(150deg, rgb(223, 125, 141) 70%, white 70% );
-}
-
 .responsive-img {
+  position: relative;
   margin: 8%;
   box-shadow: 0px 0px 5px 0px rgba(97, 95, 95, 0.619);
 }
+
+.name {
+  position: absolute;
+  bottom: 5%;
+  font-size: clamp(2rem, 20vw, 3rem);
+  text-align: center;
+  width: 100%;
+  color: rgb(236, 234, 234);
+  text-shadow: 0px 0px 2px rgb(60, 60, 60);
+}
+
+#about {
+  margin: 0px 10px 30px 10px;
+}
+
+.about__header, .about__info, .about__contacts {
+  text-align: center;
+  margin-top: 15px;
+}
+
+i {
+  margin-left: 2%;
+}
+
+  /* ========================
+   Main styling
+======================== */
+
+
