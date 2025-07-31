@@ -10,14 +10,23 @@
   <header>
     <div class="ribbon" aria-hidden="true"></div>
     <div class="info">
-      <picture>
+      <picture class="responsive-img">
         <source
+        media="(min-width: 480px)"
         srcset="
-        ../images/image1-480.jpg 480w,
-        ../images/image1-768.jpg 768w,
-        ../images/image1-1024.jpg 1024w
+        ../images/image1-768.jpg 1x,
+        ../images/image1-1536.jpg 2x,
+        ../images/image1-2304.jpg 3x
         "
         >
+        <source
+        srcset="
+        ../images/image1-mobile-480.jpg 1x,
+        ../images/image1-mobile-768.jpg 2x,
+        ../images/image1-mobile-1024.jpg 3x
+        "
+        >
+        <img src="../images/image1-mobile-480.jpg" alt="developer's picture">
       </picture>
       <section id="about">
         <h2 class="about__header">About me</h2>
@@ -57,14 +66,23 @@
         <i class="devicon-linkedin-plain" aria-label="Linkedin profile link"></i>
       </div>
     </section>
-    <picture>
+    <picture class="responsive-img">
       <source
+      media="(min-width: 480px)"
       srcset="
-      ../images/image2-480.jpg 480w,
-      ../images/image2-768.jpg 768w,
-      ../images/image2-1024.jpg 1024w
+      ../images/image2-768.jpg 1x,
+      ../images/image2-1536.jpg 2x,
+      ../images/image2-2304.jpg 3x
       "
       >
+      <source
+      srcset="
+      ../images/image2-mobile-480.jpg 1x,
+      ../images/image2-mobile-768.jpg 2x,
+      ../images/image2-mobile-1024.jpg 3x
+      "
+      >
+      <img src="../images/image2-mobile-480.jpg" alt="developer's picture">
     </picture>
   </footer>
 </body>
