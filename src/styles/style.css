@@ -40,6 +40,10 @@ img, picture, video, canvas, svg {
    Header styling
 ======================== */
 
+main {
+  margin: 25px 0;
+}
+
 .ribbon {
   position: absolute;
   width: 100%;
@@ -54,7 +58,7 @@ img, picture, video, canvas, svg {
   align-items: center;
 }
 
-.responsive-img {
+.responsive-img1 {
   position: relative;
   margin: 8%;
   box-shadow: var(--light-box-shadow);
@@ -81,6 +85,7 @@ img, picture, video, canvas, svg {
 
 i {
   margin-left: 2%;
+  cursor: pointer;
 }
 
   /* ========================
@@ -147,4 +152,35 @@ i {
   font-size: var(--text-font-small);
   max-height: 2.6rem;
   overflow: auto;
+}
+
+  /* ========================
+   Footer styling
+======================== */
+
+footer {
+  margin-top: 70px;
+}
+
+#contact {
+  background: #7bb661;
+  padding: 20px 8px;
+}
+
+.contact__header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact__info {
+  text-align: center;
+}
+
+.contact__links {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.responsive-img2 {
+  width: 100%;
 }
