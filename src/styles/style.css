@@ -1,6 +1,24 @@
 /* ========================
+   Font styles setting
+======================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ========================
    CSS reset
 ======================== */
+:root {
+  --text-color-norm : rgb(64, 63, 63);
+  --text-font-small : 0.65rem;
+  --light-box-shadow: 0px 0px 5px 0px rgba(97, 95, 95, 0.619);;
+}
 
 * {
     margin: 0;
@@ -10,7 +28,7 @@
 
 html, body {
   height: 100%;
-  font-family: sans-serif;
+  font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
 
 img, picture, video, canvas, svg {
@@ -26,7 +44,7 @@ img, picture, video, canvas, svg {
   position: absolute;
   width: 100%;
   aspect-ratio: 1/1.5;
-  z-index: -1;
+  z-index: 0;
   background-image: linear-gradient(150deg, #7bb661 70%, white 70% );
 }
 
@@ -39,7 +57,7 @@ img, picture, video, canvas, svg {
 .responsive-img {
   position: relative;
   margin: 8%;
-  box-shadow: 0px 0px 5px 0px rgba(97, 95, 95, 0.619);
+  box-shadow: var(--light-box-shadow);
 }
 
 .name {
@@ -69,4 +87,64 @@ i {
    Main styling
 ======================== */
 
+.projects__header {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
+.projects__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}  
+
+.project {
+  width: clamp(150px, 90vw, 450px);
+  aspect-ratio: 1/1.5;
+  box-shadow: var(--light-box-shadow);
+}
+
+.project__img {
+  display: block;
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project__info-wrapper {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project__info {
+  width: 97%;
+  height: 98%;
+  overflow: auto;
+}
+
+.project__info-container {
+  display: flex;
+  width: 97%;
+  justify-content: space-between;
+}
+
+.project__name {
+  font-family: 'Playfair Display';
+}
+
+.project__links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project__description {
+  color: var(--text-color-norm);
+  font-size: var(--text-font-small);
+  max-height: 2.6rem;
+  overflow: auto;
+}
