@@ -48,7 +48,7 @@ main {
   position: absolute;
   width: 100%;
   aspect-ratio: 1/1.5;
-  z-index: 0;
+  z-index: -1;
   background-image: linear-gradient(150deg, #7bb661 70%, white 70% );
 }
 
@@ -86,6 +86,44 @@ main {
 i {
   margin-left: 2%;
   cursor: pointer;
+}
+
+/* --- large mobile styling --- */
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .ribbon {
+    background-image: linear-gradient(150deg, #7bb661 60%, white 60% );
+    aspect-ratio: 1/1.1;
+  }
+}
+/* --- tablet styling --- */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ribbon {
+    background-image: linear-gradient(160deg, #7bb661 60%, white 60% );
+    aspect-ratio: 1/0.6;
+  }
+
+  .info {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .responsive-img1 {
+    widtH: 50vw;
+  }
+
+  #about {
+    background-color: azure;
+    box-shadow: var(--light-box-shadow);
+    width: max(400px, 40vw);
+    height: 400px;
+    padding: 15px;
+    padding-left: 15vw;
+    margin-left: -20vw;
+  }
+
+
 }
 
   /* ========================
@@ -154,16 +192,40 @@ i {
   overflow: auto;
 }
 
+/* --- tablet styling --- */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .projects__header {
+    margin-bottom: 40px;
+  }
+
+  #projects {
+    margin: 30px;
+  }
+
+  .projects__container {
+    flex-flow: row wrap;
+    column-gap: 20px;
+    justify-content: center;
+  }
+
+  .project {
+    width: clamp(250px, 35vw, 370px);
+    aspect-ratio: 1/1.1;
+  
+  }
+}
+
   /* ========================
    Footer styling
 ======================== */
 
 footer {
   margin-top: 70px;
+  background: #7bb661;
 }
 
 #contact {
-  background: #7bb661;
   padding: 20px 8px;
 }
 
@@ -183,4 +245,28 @@ footer {
 
 .responsive-img2 {
   width: 100%;
+}
+.responsive-img2 img {
+  width: 100%;
+}
+
+/* --- tablet styling --- */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #contact {
+    width: 50vw;
+    height: 100%;
+  }
+
+  .responsive-img2 {
+    width: 35vw;
+    margin: 10px;
+  }
+
 }
