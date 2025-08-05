@@ -36,7 +36,16 @@ img, picture, video, canvas, svg {
   max-width: 100%;
 }
 
-  /* ========================
+hr {
+  border: none;
+  width: 60px;
+  height: 4px;
+  background-color: #7bb661;
+  margin: 40px auto;
+  border-radius: 10px;
+}
+
+/* ========================
    Header styling
 ======================== */
 
@@ -110,20 +119,52 @@ i {
   }
 
   .responsive-img1 {
-    widtH: 50vw;
+    width: 50vw;
+    margin: 4%;
   }
 
   #about {
     background-color: azure;
     box-shadow: var(--light-box-shadow);
     width: max(400px, 40vw);
-    height: 400px;
+    height: max(400px, 40vw);
     padding: 15px;
     padding-left: 15vw;
-    margin-left: -20vw;
+    margin-left: -18vw;
   }
 
+  .about__header {
+    top: 50%;
+  }
+}
 
+/* --- browser styling --- */
+
+@media (min-width: 1024px) {
+  .ribbon {
+    background-image: linear-gradient(165deg, #7bb661 60%, white 60% );
+    aspect-ratio: 1/0.5;
+  }
+
+  .info {
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  .responsive-img1 {
+    width: 40vw;
+    margin: 4%;
+  }
+
+  #about {
+    background-color: azure;
+    box-shadow: var(--light-box-shadow);
+    width: max(400px, 50vw);
+    height: 300px;
+    padding: 15px;
+    padding-left: 10vw;
+    margin-left: -10vw;
+  }
 }
 
   /* ========================
@@ -216,6 +257,36 @@ i {
   }
 }
 
+/* --- browser styling --- */
+
+@media (min-width: 1024px) {
+  .projects__header {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  #projects {
+    margin: 30px;
+  }
+
+  .projects__container {
+    flex-flow: row wrap;
+    column-gap: 20px;
+    justify-content: center;
+  }
+
+  .project {
+    width: max(280px, 25vw);
+    aspect-ratio: 1/1.1;
+  }
+
+  .projects__container{
+    column-gap: 30px;
+    row-gap: 50px;
+  }  
+  
+
+}
   /* ========================
    Footer styling
 ======================== */
@@ -252,7 +323,7 @@ footer {
 
 /* --- tablet styling --- */
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   footer {
     display: flex;
     justify-content: space-between;
@@ -268,5 +339,4 @@ footer {
     width: 35vw;
     margin: 10px;
   }
-
 }
