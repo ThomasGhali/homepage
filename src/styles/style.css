@@ -36,6 +36,10 @@ img, picture, video, canvas, svg {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 hr {
   border: none;
   width: 60px;
